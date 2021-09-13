@@ -15,7 +15,7 @@ class DebtRepositoryImpl implements CrudRepository
 
     const FIND_BY_ID = "
         SELECT 
-            D.id AS debt_id, description, amount, DATE_FORMAT(due_date, '%d/%m/%Y') AS due_date, C.id AS customer_id, C.name, C.nif_number, C.address
+            D.id AS debt_id, description, amount, due_date, C.id AS customer_id, C.name, C.nif_number, C.address
         FROM debts D 
         INNER JOIN customers C ON D.customer_id = C.id 
         WHERE D.id = ?

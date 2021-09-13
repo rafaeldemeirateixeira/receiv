@@ -15,7 +15,7 @@ class CustomerRepositoryImpl implements CrudRepository
 
     const FIND_BY_ID = "
         SELECT
-            id AS customer_id, name, nif_number, DATE_FORMAT(birth_date, '%d/%m/%Y') AS birth_date, address
+            id AS customer_id, name, nif_number, birth_date, address
         FROM customers
         WHERE id = ?
     ";
